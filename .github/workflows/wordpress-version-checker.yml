@@ -2,7 +2,7 @@ name: "WordPress version checker"
 on:
   workflow_dispatch:
 
-permission:
+permissions:
   issues: write
 
 jobs:
