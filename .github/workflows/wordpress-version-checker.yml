@@ -1,9 +1,6 @@
 name: "WordPress version checker"
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
 
 jobs:
   wordpress-version-checker:
