@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: WordPress version checker
-        uses: skaut/wordpress-version-checker@close-comment
+        uses: skaut/wordpress-version-checker@configurable-channel
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
