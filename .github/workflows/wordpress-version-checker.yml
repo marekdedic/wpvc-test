@@ -2,6 +2,9 @@ name: "WordPress version checker"
 on:
   workflow_dispatch:
 
+permission:
+  issues: write
+
 jobs:
   wordpress-version-checker:
     runs-on: ubuntu-latest
