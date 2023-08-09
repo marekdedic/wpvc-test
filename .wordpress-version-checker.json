@@ -1,4 +1,5 @@
 {
-    "readme": "src/txt/readme.txt",
-    "assignees": ["marekdedic"]
+    "readme": "readme.txt",
+    "channel": "rc"
 }
+
