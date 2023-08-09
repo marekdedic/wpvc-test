@@ -1,157 +1,47 @@
-=== skautIS integrace ===
-Contributors: skaut, davidulus, marekdedic, kalich5
-Tags: skaut, multisite, plugin, shortcode, skautIS, registrace
-Requires at least: 5.0
-Tested up to: 5.2
-Requires PHP: 7.4
-Stable tag: 1.1.28
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+=== ClassifAI ===
+Contributors:      10up, jeffpaul, dkotter
+Tags:              AI, Artifical Intelligence, ML, Machine Learning, Microsoft Azure, IBM Watson, OpenAI, ChatGPT, DALL·E, Content Tagging, Classification, Smart Cropping, Alt Text
+Requires at least: 5.7
+Tested up to:      6.3
+Requires PHP:      7.4
+Stable tag:        2.2.3
+License:           GPLv2 or later
+License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
-Implementace přihlašování, registrace a dalších služeb z informačního systému skautIS do WordPressu.
+Supercharge WordPress Content Workflows and Engagement with Artificial Intelligence.
 
 == Description ==
 
-<h2> Minimální požadavky</h2>
-- WordPress 4.9.6 a vyšší
-- PHP 7.4 a vyšší
+Tap into leading cloud-based services like [OpenAI](https://openai.com/), [Microsoft Azure AI](https://azure.microsoft.com/en-us/overview/ai-platform/), and [IBM Watson](https://www.ibm.com/watson) to augment your WordPress-powered websites.  Publish content faster while improving SEO performance and increasing audience engagement.  ClassifAI integrates Artificial Intelligence and Machine Learning technologies to lighten your workload and eliminate tedious tasks, giving you more time to create original content that matters.
 
-Implementace přihlašování, registrace a dalších služeb z informačního systému skautIS do WordPressu.
+*You can learn more about ClassifAI's features at [ClassifAIPlugin.com](https://classifaiplugin.com/) and documentation at the [ClassifAI documentation site](https://10up.github.io/classifai/).*
 
-Plugin po aktivaci bude vyžadovat APP ID, bez toho nebude plugin vůbec fungovat. Návod jak nastavit plugin a zístat APP ID  najdete v [nápovědě](https://napoveda.skaut.cz/skautis/skautis-integration)
+**Features**
 
-**Jsme na GitHubu**
-[https://github.com/skaut/skautis-integration/](https://github.com/skaut/skautis-integration/)
+* Generate a summary of post content and store it as an excerpt using [OpenAI's ChatGPT API](https://platform.openai.com/docs/guides/chat)
+* Generate titles from post content using [OpenAI's ChatGPT API](https://platform.openai.com/docs/guides/chat)
+* Generate new images on demand to use in-content or as a featured image using [OpenAI's DALL·E API](https://platform.openai.com/docs/guides/images)
+* Generate transcripts of audio files using [OpenAI's Whisper API](https://platform.openai.com/docs/guides/speech-to-text)
+* Convert text content into audio and output a "read-to-me" feature on the front-end to play this audio using [Microsoft Azure's Text to Speech API](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/text-to-speech)
+* Classify post content using [IBM Watson's Natural Language Understanding API](https://www.ibm.com/watson/services/natural-language-understanding/) and [OpenAI's Embedding API](https://platform.openai.com/docs/guides/embeddings)
+* BETA: Recommend content based on overall site traffic via [Microsoft Azure's Personalizer API](https://azure.microsoft.com/en-us/services/cognitive-services/personalizer/) _(note that we're gathering feedback on this feature and may significantly iterate depending on community input)_
+* Generate image alt text, image tags, and smartly crop images using [Microsoft Azure's Computer Vision API](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/)
+* Scan images and PDF files for embedded text and save for use in post meta using [Microsoft Azure's Computer Vision API](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/)
+* Bulk classify content with [WP-CLI](https://wp-cli.org/)
 
-== Installation ==
-1. Stáhnout si plugin a aktivovat
-2. V levém menu se objeví položka skautIS
-3. Musíte si zažádat o APP ID návod je v [nápovědě](https://napoveda.skaut.cz/skautis/skautis-integration)
-4. Zadáte APP ID a plugin se plně aktivuje
+**Requirements**
 
-== Frequently Asked Questions ==
-**Jak plugin správně nastavit?**
-[Nápověda](https://napoveda.skaut.cz/skautis/skautis-integration)
+* To utilize the NLU Language Processing functionality, you will need an active [IBM Watson](https://cloud.ibm.com/registration) account.
+* To utilize the ChatGPT, Embeddings, or Whisper Language Processing functionality or DALL·E Image Processing functionality, you will need an active [OpenAI](https://platform.openai.com/signup) account.
+* To utilize the Computer Vision Image Processing functionality or Text to Speech Language Processing functionality, you will need an active [Microsoft Azure](https://signup.azure.com/signup) account.
 
-== Screenshots ==
+== Upgrade Notice ==
 
+= 2.1.0 =
+**Note that this release moves the ClassifAI settings to be nested under Tools instead of it's own menu.**
 
-== Changelog ==
+= 1.8.1 =
+**Note that this release bumps the WordPress minimum from 5.6 to 5.7 and the PHP minimum from 7.2 to 7.4.**
 
-= 1.1.28 =
-* Fixed page visibility rules not being saved
-
-= 1.1.27 =
-* Fixed role switcher on the user management page
-* Fixed an error on PHP 7
-
-= 1.1.26 =
-* Security fixes
-* Improved error handling
-* Improved translations
-* Enabled asset minification, leading to faster loading
-* Improved asset caching, leading to faster loading
-* Fixed corner-case issues in rule processing
-
-= 1.1.25 =
-* Security fixes
-
-= 1.1.24 =
-* Added support for PHP 8.1
-* Raised minimum PHP version to 7.4
-
-= 1.1.23 =
-* Optimized dependency loading
-* Fixed a typo in code
-
-= 1.1.22 =
-* Fixed an issue where the plugin would cause a fatal error on yet some other sites
-
-= 1.1.21 =
-* Fixed an issue from 1.1.19 where the plugin would cause a fatal error on some sites
-
-= 1.1.20 =
-* Re-released version 1.1.18
-
-= 1.1.19 =
-* Switched from session to WP transients for Skautis user management
-
-= 1.1.18 =
-* Fixed security issues
-* Replaced dependencies loaded from CDN with bundled ones
-
-= 1.1.17 =
-* oprava chyb
-
-= 1.1.16 =
-* oprave kompatibility s PHP 8.x
-
-= 1.1.15 =
-* Nejnižší požadovaná verze změněna na 4.9.6
-
-= 1.1.14 =
-* Ve výběru rolí na stránce "Správa uživatelů" se nyní zobrazují jen aktivní role podle skautISu
-
-= 1.1.13 =
-* Oprava zpracování funkcí při přihlášení/registraci
-
-= 1.1.12 =
-* Nové pravidlo: kvalifikace
-* Pravidla: u členství, rolí a funkcí lze nyní zvolit možnost "jakékoliv" u evidenčního čísla jednotky
-* Správa uživatelů - vyšší výchozí počet záznamů na stránku, ukládání stavu tabulky = po znovunačtení stránky se tabulka zobrazí v původním stavu
-* Modul Viditelnost - pravidla převzatá z nadřazených stránek se u podřízených stránek označí ve výběru jako vybraná (disabled)
-* Aktualizace JS knihoven
-
-= 1.1.11 =
-* Opravy chyb
-
-= 1.1.10 =
-* Novinka - na podřízené stránky se nyní použijí pravidla z celého hierarchického stromu nadřízených stránek, nejen z nejvýše nadřazené stránky
-* Výpis pravidel z nadřazených stránek
-* Drobné opravy
-
-= 1.1.9 =
-* Při použití pravidla "Všichni bez omezení" se mohou nově přihlašovat jen ti, kteří mají propojený účet ve skautISu. Aby se zabránilo tomu, že si někdo vytvoří jen tak účet a pak se přihlásí třeba do uzavřené sekce nějakého skautského webu.
-
-= 1.1.8 =
-* Oprava logování přihlášení/odhlášení pro pluginy, které hlídají co se na webu děje. (př.: Simple History)
-
-= 1.1.7 =
-* Změna rozesílání emailů, nyní se odesílají vždy podle globálního nastavení
-
-= 1.1.6 =
-* Opraveno vytváření uživatelů
-
-= 1.1.5 =
-* Opraveno zobrazování stránky se správou uživatelů při zvolení špatné role
-
-= 1.1.4 =
-* změna vytváření uživatelského jména při registraci - místo emailu uživatele se nyní nastaví jeho login do skautISu
-* oprava propojování účtů
-* oprava načítání query editoru
-* oprava ukládání nastavení na PHP 7.0.x
-
-= 1.1.3 =
-* možnost vytvářet manuálně nové uživatele
-* lepší vyhledávání na stránce "Správa uživatelů" (řeší omezení limitu 500 uživatelů naráz ze skautISu)
-
-= 1.1.2 =
-* opravy textů v pluginu
-
-= 1.1.1 =
-* dopnění překladů, frontend je nyní AJ a CZ
-
-= 1.1 =
-* vyžadováno PHP 7.0 a vyšší
-* nové pravidlo: funkce
-* viditelnost stránek/příspěvků/custom type
-* shortcode pro vymezení obsahu
-* lepší rozhraní na stránce "Správa uživatelů"
-
-= 1.0 =
-* podpora přihlášení přes skautIS
-* podpora registrace přes skautIS
-* nastavování pravidel
-* propojování již registrovaných uživatelů
-* nastavování propojování pravidel a rolí ve WordPressu
-* vyžadován WordPress 4.8 a vyšší
+= 1.8.0 =
+**Note that this release bumps the PHP minimum from 7.0 to 7.2.**
